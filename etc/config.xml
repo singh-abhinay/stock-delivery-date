@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <stockdeliverydate>
+            <general>
+                <enable>1</enable>
+                <product_type_allowed>simple,configurable</product_type_allowed>
+            </general>
+        </stockdeliverydate>
+    </default>
+</config>

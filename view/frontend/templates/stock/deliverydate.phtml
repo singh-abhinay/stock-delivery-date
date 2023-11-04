@@ -1,0 +1,13 @@
+<?php
+$productData = $block->getCurrentProductType();
+?>
+
+<?php if (!empty($productData)): ?>
+    <div class="stock-delivery-date" data-ptype="<?= $productData['type']; ?>" id="stock-delivery-date"
+         data-url="<?= $block->getBaseUrl(); ?>">
+        <span class="estimated-delivery-msg"
+              style="<?= isset($productData['date']) ?: 'display:none;'; ?>"><?= 'Estimated Stock Delivery Date: ' ?>
+            <strong class="delivery-date"><?= isset($productData['date']) ? $productData['date'] : ''; ?></strong>
+        </span>
+    </div>
+<?php endif; ?>

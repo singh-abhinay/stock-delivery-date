@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="stockdelivery" translate="label" sortOrder="10">
+            <label>Stock Delivery Date</label>
+        </tab>
+        <section id="stockdeliverydate" showInDefault="1" showInWebsite="1" showInStore="1" type="text" translate="label"
+                 sortOrder="150">
+            <label>Magento StockDeliveryDate</label>
+            <tab>stockdelivery</tab>
+            <resource>Magento_StockDeliveryDate::stockdelivery</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="5">
+                <label>General Setting</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_type_allowed" translate="label" type="multiselect" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Allowed Product Type</label>
+                    <source_model>Magento\StockDeliveryDate\Model\Config\Source\ProductTypes</source_model>
+                    <comment>Allowed product type for showing stock delivery date.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
